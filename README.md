@@ -1,5 +1,7 @@
 ![screenshot](https://github.com/some-yummy-nick/vue-user-list/blob/main/vue-user-list.png)
 
+[Результат](https://some-yummy-vue-user-list.netlify.app)
+
 # vue-user-list
 
 ## Project setup
