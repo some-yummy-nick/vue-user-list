@@ -1,0 +1,20 @@
+.reset-btn {
+  margin: 0;
+  padding: 5px;
+  border-color: transparent;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+}
+
+button,
+.button{
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+

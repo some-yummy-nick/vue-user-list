@@ -1,0 +1,13 @@
+.table {
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: center;
+
+  &__head ,
+  &__cell{
+    border: 1px solid;
+    padding: 5px;
+  }
+}
+
