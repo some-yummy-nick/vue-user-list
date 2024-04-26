@@ -10,9 +10,6 @@ const q = toRef(props.searchQuery);
 <template>
   <div class="user-search">
     <form @submit.prevent="$emit('setSearch', q)">
-      <label for="user-input" class="label user-search__label"
-        >Поиск пользователя</label
-      >
       <div class="user-search__line">
         <input
           type="search"
