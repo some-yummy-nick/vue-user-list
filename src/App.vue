@@ -36,14 +36,17 @@ const setSearch = (q: string) => {
 
 <template>
   <UserSearch :searchQuery="getSearchQuery()" @setSearch="setSearch" />
-  <UserTable :items="paginatedItems" />
-  <UserPagination
-    :pageCount="pageCount"
-    :pageNumber="pageNumber + 1"
-    @prevPage="decreasePageNumber"
-    @nextPage="increasePageNumber"
-    @setPage="setPage"
-  />
+  <template v-if="paginatedItems.length">
+    <UserTable :items="paginatedItems" />
+    <UserPagination
+      :pageCount="pageCount"
+      :pageNumber="pageNumber + 1"
+      @prevPage="decreasePageNumber"
+      @nextPage="increasePageNumber"
+      @setPage="setPage"
+    />
+  </template>
+  <div class="text-center" v-else>Ничего не найдено</div>
 </template>
 <style lang="scss">
 @import "./assets/style/style.scss";

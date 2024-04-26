@@ -37,6 +37,11 @@ defineProps<{
   align-items: center;
   justify-content: center;
   gap: 10px;
+  position: sticky;
+  bottom: 0;
+  padding-bottom: 10px;
+  z-index: 2;
+  background-color: white;
 
   &__number {
     &.active {

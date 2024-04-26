@@ -25,21 +25,21 @@ export const usePagination = (
         (item) =>
           item.title.includes(search) ||
           item.name.includes(search) ||
-          item.second.includes(search)
+          item.second.includes(search) ||
+          `${item.name} ${item.second}`.includes(search) ||
+          `${item.title} ${item.name} ${item.second}`.includes(search)
       );
     }
     return items;
   });
   const paginatedItems = computed(() => {
     const search: string = q.value;
-    let items: User[] = [];
+    let items: User[] = list;
     if (search) {
       items = filteredItems.value;
     }
     if (items.length) {
       items = items.slice(start.value, end.value);
-    } else {
-      items = list.slice(start.value, end.value);
     }
     return items;
   });
@@ -49,7 +49,7 @@ export const usePagination = (
     if (q.value) {
       current = filteredItems.value;
     }
-    return Math.ceil(current.length / size) || 0;
+    return Math.ceil(current.length / size) || 1;
   });
   const increasePageNumber = () => {
     const page = pageNumber.value;

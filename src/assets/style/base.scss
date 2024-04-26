@@ -1,3 +1,8 @@
+html {
+  scrollbar-width: thin;
+  scrollbar-color: gray white;
+}
+
 .reset-btn {
   margin: 0;
   padding: 5px;
@@ -7,7 +12,7 @@
 }
 
 button,
-.button{
+.button {
   cursor: pointer;
   padding: 5px;
   transition: background-color 0.3s, color 0.3s;
@@ -16,5 +21,9 @@ button,
     background-color: black;
     color: white;
   }
+}
+
+.text-center {
+  text-align: center;
 }
 
